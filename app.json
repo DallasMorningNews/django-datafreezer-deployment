@@ -8,6 +8,7 @@
   ],
   "website": "https://github.com/DallasMorningNews/django-datafreezer",
   "repository": "https://github.com/DallasMorningNews/django-datafreezer-deployment",
+  "logo": "https://cdn.rawgit.com/DallasMorningNews/django-datafreezer-deployment/master/core/static/core/img/datafreezer_icon_touch.png",
   "success_url": "/",
   "scripts": {
     "postdeploy": "python manage.py migrate"
