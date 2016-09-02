@@ -20,6 +20,12 @@
     "DATABASE_URL": {
       "description": "A connection string to your database (PostgreSQL and MySQL are the currently-supported backends).",
       "required": "true"
+    },
+    "DATAFREEZER_DESKS_LIST_URL": {
+      "description": "A link to a JSON-formatted list of desks (topic groups) to use in the app."
+    },
+    "DATAFREEZER_STAFF_LIST_URL": {
+      "description": "A link to a JSON-formatted list of staffers to use in the app."
     }
   }
 }
