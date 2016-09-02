@@ -10,7 +10,7 @@
   "repository": "https://github.com/DallasMorningNews/django-datafreezer-deployment",
   "success_url": "/",
   "scripts": {
-    "postdeploy": "python manage.py migrate && python manage.py collectstatic"
+    "postdeploy": "python manage.py migrate"
   },
   "env": {
     "DEBUG_MODE": {
