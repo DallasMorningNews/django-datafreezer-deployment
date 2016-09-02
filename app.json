@@ -13,6 +13,10 @@
     "postdeploy": "python manage.py migrate && python manage.py collectstatic"
   },
   "env": {
+    "DEBUG_MODE": {
+      "description": "Should this install display detailed error pages? (Note: you should never deploy a site into production with DEBUG turned on).",
+      "value": "on"
+    },
     "SECRET_KEY": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
