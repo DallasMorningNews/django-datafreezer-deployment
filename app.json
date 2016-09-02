@@ -1,0 +1,25 @@
+{
+  "name": "django-datafreezer",
+  "description": "A tool for quickly and easily sharing datasets.",
+  "keywords": [
+    "data",
+    "dataset",
+    "storage"
+  ],
+  "website": "https://github.com/DallasMorningNews/django-datafreezer",
+  "repository": "https://github.com/DallasMorningNews/django-datafreezer-deployment",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "python manage.py migrate && python manage.py collectstatic"
+  },
+  "env": {
+    "SECRET_KEY": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "DATABASE_URL": {
+      "description": "A connection string to your database (PostgreSQL and MySQL are the currently-supported backends).",
+      "required": "true"
+    }
+  }
+}

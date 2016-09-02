@@ -1,0 +1,9 @@
+Django~=1.10
+boto~=2.39
+dj-database-url
+django-storages
+gunicorn
+psycopg2
+wsgiref
+django-datafreezer
+whitenoise~=3.2
