@@ -5,5 +5,5 @@ django-storages
 gunicorn
 psycopg2
 wsgiref
-django-datafreezer~=0.1.3
+django-datafreezer~=0.1.4
 whitenoise~=3.2
