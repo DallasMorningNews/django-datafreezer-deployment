@@ -7,7 +7,7 @@
 beautifulsoup4==4.5.1     # via django-datafreezer
 boto==2.42.0
 dj-database-url==0.4.1
-django-datafreezer==0.1.4
+django-datafreezer==0.1.6
 django-dynamic-formsets==0.0.8  # via django-datafreezer
 django-storages==1.5.0
 Django==1.10              # via django-datafreezer
