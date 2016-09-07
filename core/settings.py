@@ -167,6 +167,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'datafreezer/uploads/')
 
 MEDIA_URL = '/media/'
 
+if 'DATAFREEZER_AWS_ACCESS_KEY_ID' in os.environ:
+    from storages.backends.s3boto import S3BotoStorage
+
+    class MediaRootS3BotoStorage(S3BotoStorage):
+        access_key = os.environ['DATAFREEZER_AWS_ACCESS_KEY_ID']
+        secret_key = os.environ['DATAFREEZER_AWS_SECRET_ACCESS_KEY']
+        bucket_name = os.environ['DATAFREEZER_AWS_STORAGE_BUCKET_NAME']
+
+        def __init__(self, *args, **kwargs):
+            kwargs['location'] = 'media'
+            super(MediaRootS3BotoStorage, self).__init__(*args, **kwargs)
+
+    DATAFREEZER_CUSTOM_STORAGE_CLASS = MediaRootS3BotoStorage()
+
 
 # Django Debug Toolbar
 # https://django-debug-toolbar.readthedocs.io/en/stable/installation.html
